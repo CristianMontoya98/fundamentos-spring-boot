@@ -16,7 +16,11 @@ public class MyConfigurationBean {
         return new MyOperationImplement();
     }
     @Bean
-    public MyBeanWithDependency beanOperationsum(MyOperation myOperation){
-        return new MyBeanWithDEpendencyImplement(myOperation);
+    public Multiply beanMultiplication(){
+        return new MultiplyImplement();
+    }
+    @Bean
+    public MyBeanWithDependency beanOperationsum(MyOperation myOperation, Multiply multiply){
+        return new MyBeanWithDEpendencyImplement(myOperation, multiply);
     }
 }
